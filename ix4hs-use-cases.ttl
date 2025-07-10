@@ -1,0 +1,184 @@
+@prefix : <http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/> .
+
+<http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#hasRole
+:hasRole rdf:type owl:ObjectProperty ;
+         rdfs:domain :Person ;
+         rdfs:range :Role .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Appraisal
+:Appraisal rdf:type owl:Class ;
+           rdfs:isDefinedBy """flags assessed to confirm risk
+
+Survey 
+Flags raised (Assessment Process)
+Diagnosis (both clinical and social) - Social Care = Problem
+
+Problem 
+subclass = social care terminology structure
+subclass = clinical - certification to determine""" .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Assessment
+:Assessment rdf:type owl:Class ;
+            rdfs:isDefinedBy "purpose is to establish that a problem exists" .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#AssessmentInsideAPractice
+:AssessmentInsideAPractice rdf:type owl:Class ;
+                           rdfs:subClassOf :Assessment ;
+                           rdfs:comment "leads to a Diagnosis" .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#AssessmentScale
+:AssessmentScale rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#CareGiver
+:CareGiver rdf:type owl:Class ;
+           rdfs:subClassOf :Role .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#CareTeam
+:CareTeam rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Client
+:Client rdf:type owl:Class ;
+        rdfs:subClassOf :Role .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Clinician
+:Clinician rdf:type owl:Class ;
+           rdfs:subClassOf :Role ;
+           rdfs:comment "Clinician assesses" .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Collector
+:Collector rdf:type owl:Class ;
+           rdfs:subClassOf :Role .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#CommunityCareHub
+:CommunityCareHub rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Conditions
+:Conditions rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#CostOfCare
+:CostOfCare rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Diagnosis
+:Diagnosis rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#DiagnosisCoding
+:DiagnosisCoding rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#FormalAssessmentDefinedByCBO
+:FormalAssessmentDefinedByCBO rdf:type owl:Class ;
+                              rdfs:subClassOf :Assessment .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#LOINCCode
+:LOINCCode rdf:type owl:Class ;
+           rdfs:isDefinedBy """the data properties of both a Screening Tool and Assessment Tool
+serves a lot of purposes""" ;
+           rdfs:label "LOIN Code" .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Observation
+:Observation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#OptimalHealth
+:OptimalHealth rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Organization
+:Organization rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Patient
+:Patient rdf:type owl:Class ;
+         rdfs:subClassOf :Role .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Payer
+:Payer rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Person
+:Person rdf:type owl:Class ;
+        rdfs:comment "Pre/post-clinical episode" .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Priority
+:Priority rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Problem
+:Problem rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#QualityOfCare
+:QualityOfCare rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Questionnaire
+:Questionnaire rdf:type owl:Class ;
+               rdfs:comment "LOINC Code term" .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Referral
+:Referral rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Risk
+:Risk rdf:type owl:Class ;
+      rdfs:comment "stratification" .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Role
+:Role rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#ScopeOfPractice
+:ScopeOfPractice rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Screen
+:Screen rdf:type owl:Class ;
+        rdfs:isDefinedBy "A tool intended to establish the possibility of a diagnosis to a specific problem" .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#ScreeningConfirmation
+:ScreeningConfirmation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#ScreeningPurpose
+:ScreeningPurpose rdf:type owl:Class ;
+                  rdfs:comment "figure out what to assess" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
