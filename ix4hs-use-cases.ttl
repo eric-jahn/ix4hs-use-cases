@@ -12,7 +12,7 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#hasRole
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/hasRole
 :hasRole rdf:type owl:ObjectProperty ;
          rdfs:domain :Person ;
          rdfs:range :Role .
@@ -22,7 +22,317 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Appraisal
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Action
+:Action rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#AdministrativePerformedAction
+:AdministrativePerformedAction rdf:type owl:Class ;
+                               rdfs:subClassOf :PerformedAction .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#AdministrativePersistentState
+:AdministrativePersistentState rdf:type owl:Class ;
+                               rdfs:isDefinedBy "A long-lived administrative status or condition, such as program enrollment or active coverage." .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#AdministrativeRequestedAction
+:AdministrativeRequestedAction rdf:type owl:Class ;
+                               rdfs:subClassOf :RequestedAction ;
+                               rdfs:isDefinedBy "An administrative activity that has been requested, such as a referral for a benefit assessment or ID verification." .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#AdvancedDirective
+:AdvancedDirective rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#AdverseEvent
+:AdverseEvent rdf:type owl:Class ;
+              rdfs:subClassOf :Event .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Answer
+:Answer rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#CDASectionInDocument
+:CDASectionInDocument rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#CapabilityStatement
+:CapabilityStatement rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#ClinicalPersistentState
+:ClinicalPersistentState rdf:type owl:Class ;
+                         rdfs:isDefinedBy "A long-lived clinical condition, assertion, or judgment that represents an enduring or significant aspect of a patient's health or care. It typically reflects a professional clinical interpretation or decision, based on observed data, about the presence, meaning, or relevance of a health-related phenomenon." .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#ClinicalRequestedAction
+:ClinicalRequestedAction rdf:type owl:Class ;
+                         rdfs:subClassOf :RequestedAction ;
+                         rdfs:isDefinedBy "A clinical intervention or service that has been requested but not yet performed (e.g., medication order, referral)." .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Communication
+:Communication rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#CommunicationRequest
+:CommunicationRequest rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#DescribableEntity
+:DescribableEntity rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Document
+:Document rdf:type owl:Class ;
+          rdfs:isDefinedBy "A structured, authored artifact intended to be shared or persisted. A document contains metadata about its authorship, context, and status, and references or includes descriptions of existing observable entities, performed or requested actions, events, and describable entities." .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#EligibilityRequest
+:EligibilityRequest rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#EnrollmentRequest
+:EnrollmentRequest rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Event
+:Event rdf:type owl:Class ;
+       rdfs:isDefinedBy "To capture unplanned, emergent phenomena (e.g., fall, error, no-show)." .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#InsurancePlan
+:InsurancePlan rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#ObservableAdministrativeEntity
+:ObservableAdministrativeEntity rdf:type owl:Class ;
+                                rdfs:subClassOf :ObservableEntity ;
+                                rdfs:isDefinedBy "An administrative fact or status observed about a subject or system, such as insurance status or consent." .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#ObservableClinicalEntity
+:ObservableClinicalEntity rdf:type owl:Class ;
+                          rdfs:subClassOf :ObservableEntity ;
+                          rdfs:isDefinedBy "A clinical fact or state observed about a subject, such as vital signs, symptoms, or laboratory findings." .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#ObservableEntity
+:ObservableEntity rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#PerformedAction
+:PerformedAction rdf:type owl:Class ;
+                 rdfs:subClassOf :Action .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Provenance
+:Provenance rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Question
+:Question rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#QuestionnaireResponse
+:QuestionnaireResponse rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#RequestGroup
+:RequestGroup rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#RequestedAction
+:RequestedAction rdf:type owl:Class ;
+                 rdfs:subClassOf :Action .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#RiskAssessment
+:RiskAssessment rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#ServiceOffering
+:ServiceOffering rdf:type owl:Class ;
+                 rdfs:isDefinedBy "A named or described capability provided by an organization, location, system, or agent that may be accessed or requested . It represents what is available, not a specific event or instance of care" .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Account
+:fhir:Account rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Allergy
+:fhir:Allergy rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Appointment
+:fhir:Appointment rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:AuditEvent
+:fhir:AuditEvent rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:CDADocument
+:fhir:CDADocument rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Claim
+:fhir:Claim rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:ClaimResponse
+:fhir:ClaimResponse rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Communication
+:fhir:Communication rdf:type owl:Class ;
+                    rdfs:subClassOf :Communication .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:CommunicationRequest
+:fhir:CommunicationRequest rdf:type owl:Class ;
+                           rdfs:subClassOf :CommunicationRequest .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Consent
+:fhir:Consent rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Contract
+:fhir:Contract rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Coverage
+:fhir:Coverage rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:CoverageEligibility
+:fhir:CoverageEligibility rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:CoverageEligibilityRequest
+:fhir:CoverageEligibilityRequest rdf:type owl:Class ;
+                                 rdfs:subClassOf :EligibilityRequest .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:CoverageEligibilityResponse
+:fhir:CoverageEligibilityResponse rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:DeviceRequest
+:fhir:DeviceRequest rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:DeviceUseStatement
+:fhir:DeviceUseStatement rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:DiagnosticReport
+:fhir:DiagnosticReport rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:DocumentReference
+:fhir:DocumentReference rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Eligibility
+:fhir:Eligibility rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Enrollment
+:fhir:Enrollment rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:EnrollmentRequest
+:fhir:EnrollmentRequest rdf:type owl:Class ;
+                        rdfs:subClassOf :EnrollmentRequest .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:EnrollmentResponse
+:fhir:EnrollmentResponse rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:EpisodeOfCare
+:fhir:EpisodeOfCare rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Evidence
+:fhir:Evidence rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:ExplanationOfBenefits
+:fhir:ExplanationOfBenefits rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:FamilyMembershipHistory
+:fhir:FamilyMembershipHistory rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Goal
+:fhir:Goal rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:HealthcareService
+:fhir:HealthcareService rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:ImagingStudy
+:fhir:ImagingStudy rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:ImmunizationRequest
+:fhir:ImmunizationRequest rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Invoice
+:fhir:Invoice rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:MedicationDispense
+:fhir:MedicationDispense rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:MedicationRequest
+:fhir:MedicationRequest rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:MessageHeader
+:fhir:MessageHeader rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:NutritionOrder
+:fhir:NutritionOrder rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Provenance
+:fhir:Provenance rdf:type owl:Class ;
+                 rdfs:subClassOf :Provenance .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:Schedule
+:fhir:Schedule rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:ServiceRequest
+:fhir:ServiceRequest rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:SupplyDelivery
+:fhir:SupplyDelivery rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:SupplyRequest
+:fhir:SupplyRequest rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#fhir:VisionPrescription
+:fhir:VisionPrescription rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Appraisal
 :Appraisal rdf:type owl:Class ;
            rdfs:isDefinedBy """flags assessed to confirm risk
 
@@ -35,150 +345,150 @@ subclass = social care terminology structure
 subclass = clinical - certification to determine""" .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Assessment
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Assessment
 :Assessment rdf:type owl:Class ;
             rdfs:isDefinedBy "purpose is to establish that a problem exists" .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#AssessmentInsideAPractice
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/AssessmentInsideAPractice
 :AssessmentInsideAPractice rdf:type owl:Class ;
                            rdfs:subClassOf :Assessment ;
                            rdfs:comment "leads to a Diagnosis" .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#AssessmentScale
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/AssessmentScale
 :AssessmentScale rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#CareGiver
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/CareGiver
 :CareGiver rdf:type owl:Class ;
            rdfs:subClassOf :Role .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#CareTeam
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/CareTeam
 :CareTeam rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Client
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Client
 :Client rdf:type owl:Class ;
         rdfs:subClassOf :Role .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Clinician
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Clinician
 :Clinician rdf:type owl:Class ;
            rdfs:subClassOf :Role ;
            rdfs:comment "Clinician assesses" .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Collector
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Collector
 :Collector rdf:type owl:Class ;
            rdfs:subClassOf :Role .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#CommunityCareHub
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/CommunityCareHub
 :CommunityCareHub rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Conditions
-:Conditions rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#CostOfCare
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/CostOfCare
 :CostOfCare rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Diagnosis
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Diagnosis
 :Diagnosis rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#DiagnosisCoding
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/DiagnosisCoding
 :DiagnosisCoding rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#FormalAssessmentDefinedByCBO
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/FormalAssessmentDefinedByCBO
 :FormalAssessmentDefinedByCBO rdf:type owl:Class ;
                               rdfs:subClassOf :Assessment .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#LOINCCode
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/LOINCCode
 :LOINCCode rdf:type owl:Class ;
            rdfs:isDefinedBy """the data properties of both a Screening Tool and Assessment Tool
 serves a lot of purposes""" ;
            rdfs:label "LOIN Code" .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Observation
-:Observation rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#OptimalHealth
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/OptimalHealth
 :OptimalHealth rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Organization
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Organization
 :Organization rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Patient
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Patient
 :Patient rdf:type owl:Class ;
          rdfs:subClassOf :Role .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Payer
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Payer
 :Payer rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Person
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Person
 :Person rdf:type owl:Class ;
         rdfs:comment "Pre/post-clinical episode" .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Priority
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Priority
 :Priority rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Problem
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Problem
 :Problem rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#QualityOfCare
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/QualityOfCare
 :QualityOfCare rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Questionnaire
-:Questionnaire rdf:type owl:Class ;
-               rdfs:comment "LOINC Code term" .
-
-
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Referral
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Referral
 :Referral rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Risk
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Risk
 :Risk rdf:type owl:Class ;
       rdfs:comment "stratification" .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Role
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Role
 :Role rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#ScopeOfPractice
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/ScopeOfPractice
 :ScopeOfPractice rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#Screen
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/Screen
 :Screen rdf:type owl:Class ;
         rdfs:isDefinedBy "A tool intended to establish the possibility of a diagnosis to a specific problem" .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#ScreeningConfirmation
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/ScreeningConfirmation
 :ScreeningConfirmation rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113#ScreeningPurpose
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/ScreeningPurpose
 :ScreeningPurpose rdf:type owl:Class ;
                   rdfs:comment "figure out what to assess" .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/fhir:Condition
+:fhir:Condition rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/fhir:Observation
+:fhir:Observation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/6/untitled-ontology-113/fhir:Questionnaire
+:fhir:Questionnaire rdf:type owl:Class ;
+                    rdfs:comment "LOINC Code term" .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
